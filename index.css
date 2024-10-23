@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    background-color: #302e2b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cel{
+    height: 65px;
+    width: 12.5%;
+    background-color: pink;
+    position: relative;
+    padding: 0;
+}
+.biale{
+    background-color: #f7f7f7;
+    border: 1px solid black;
+}
+.czerwone{
+    background-color: #f7573e;
+    border: 1px solid black;
+}
+#tabela{
+    border: solid black 5px;
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+.zaznaczenie{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 0;
+    border-radius: 50%;
+    margin: 10%;
+}
+.przyciskZPionkiem{
+    height: 100%;
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    border: none;
+}
+.image{
+    width: 100%;
+}
+.GuzikRuchu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+    border: none;
+}
+tr {
+    width: 100%;
+}
+h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+    padding: 10px;
+}
+#startBtn{
+    position: absolute;
+    bottom: 25px;
+    margin-left: auto;
+    background-color: #4aff53;
+    border: solid #1a541d 3px;
+    color: white;
+    width: 200px;
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+#linkDoOryginalu{
+    position: absolute;
+    bottom: 0;
+    color: lightgray;   
+}
+#linkDoOryginalu:hover{
+    position: absolute;
+    bottom: 0;
+    color: white;   
+}
+#linkDoOryginalu:visited{
+    position: absolute;
+    bottom: 0;
+    color: white;   
+}
+#by{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+}
+
+@media only screen and (min-width: 1000px) {
+    #tabela{
+        width: 50%;
+    }
+    .cel{
+        height: 62px;
+    }
+    .przyciskZPionkiem{
+        height: 10%;
+        width: 100%;
+    }
+    .image{
+        height: 60px;
+        width: auto;
+    }
+    #startBtn{
+        width: 50%;
+        font-size: 16px;
+        bottom: 10px;
+    }
+}

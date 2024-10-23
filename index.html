@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/BialyPionek.png">
+    <script src="index.js"></script>
+    <title>Szachy Leona</title>
+</head>
+<body>
+    <!-- Całość kodu została zrobiona przez Leona (i w 1% ze stackoverflow) -->
+    <h3 id="tekstNaGorze">Kliknij start aby zacząć!</h3>
+    <table id="tabela">
+        <tr class="pad">
+            <td class="cel biale" id="1-1">
+                <div class="zaznaczenie" id="1-1-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="1-2">
+                <div class="zaznaczenie" id="1-2-zaz"></div>
+            </td>
+            <td class="cel biale" id="1-3">
+                <div class="zaznaczenie" id="1-3-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="1-4">
+                <div class="zaznaczenie" id="1-4-zaz"></div>
+            </td>
+            <td class="cel biale" id="1-5">
+                <div class="zaznaczenie" id="1-5-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="1-6">
+                <div class="zaznaczenie" id="1-6-zaz"></div>
+            </td>
+            <td class="cel biale" id="1-7">
+                <div class="zaznaczenie" id="1-7-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="1-8">
+                <div class="zaznaczenie" id="1-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel czerwone" id="2-1">
+                <div class="zaznaczenie" id="2-1-zaz"></div>
+            </td>
+            <td class="cel biale" id="2-2">
+                <div class="zaznaczenie" id="2-2-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="2-3">
+                <div class="zaznaczenie" id="2-3-zaz"></div>
+            </td>
+            <td class="cel biale" id="2-4">
+                <div class="zaznaczenie" id="2-4-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="2-5">
+                <div class="zaznaczenie" id="2-5-zaz"></div>
+            </td>
+            <td class="cel biale" id="2-6">
+                <div class="zaznaczenie" id="2-6-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="2-7">
+                <div class="zaznaczenie" id="2-7-zaz"></div>
+            </td>
+            <td class="cel biale" id="2-8">
+                <div class="zaznaczenie" id="2-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel biale" id="3-1">
+                <div class="zaznaczenie" id="3-1-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="3-2">
+                <div class="zaznaczenie" id="3-2-zaz"></div>
+            </td>
+            <td class="cel biale" id="3-3">
+                <div class="zaznaczenie" id="3-3-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="3-4">
+                <div class="zaznaczenie" id="3-4-zaz"></div>
+            </td>
+            <td class="cel biale" id="3-5">
+                <div class="zaznaczenie" id="3-5-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="3-6">
+                <div class="zaznaczenie" id="3-6-zaz"></div>
+            </td>
+            <td class="cel biale" id="3-7">
+                <div class="zaznaczenie" id="3-7-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="3-8">
+                <div class="zaznaczenie" id="3-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel czerwone" id="4-1">
+                <div class="zaznaczenie" id="4-1-zaz"></div>
+            </td>
+            <td class="cel biale" id="4-2">
+                <div class="zaznaczenie" id="4-2-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="4-3">
+                <div class="zaznaczenie" id="4-3-zaz"></div>
+            </td>
+            <td class="cel biale" id="4-4">
+                <div class="zaznaczenie" id="4-4-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="4-5">
+                <div class="zaznaczenie" id="4-5-zaz"></div>
+            </td>
+            <td class="cel biale" id="4-6">
+                <div class="zaznaczenie" id="4-6-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="4-7">
+                <div class="zaznaczenie" id="4-7-zaz"></div>
+            </td>
+            <td class="cel biale" id="4-8">
+                <div class="zaznaczenie" id="4-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel biale" id="5-1">
+                <div class="zaznaczenie" id="5-1-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="5-2">
+                <div class="zaznaczenie" id="5-2-zaz"></div>
+            </td>
+            <td class="cel biale" id="5-3">
+                <div class="zaznaczenie" id="5-3-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="5-4">
+                <div class="zaznaczenie" id="5-4-zaz"></div>
+            </td>
+            <td class="cel biale" id="5-5">
+                <div class="zaznaczenie" id="5-5-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="5-6">
+                <div class="zaznaczenie" id="5-6-zaz"></div>
+            </td>
+            <td class="cel biale" id="5-7">
+                <div class="zaznaczenie" id="5-7-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="5-8">
+                <div class="zaznaczenie" id="5-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel czerwone" id="6-1">
+                <div class="zaznaczenie" id="6-1-zaz"></div>
+            </td>
+            <td class="cel biale" id="6-2">
+                <div class="zaznaczenie" id="6-2-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="6-3">
+                <div class="zaznaczenie" id="6-3-zaz"></div>
+            </td>
+            <td class="cel biale" id="6-4">
+                <div class="zaznaczenie" id="6-4-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="6-5">
+                <div class="zaznaczenie" id="6-5-zaz"></div>
+            </td>
+            <td class="cel biale" id="6-6">
+                <div class="zaznaczenie" id="6-6-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="6-7">
+                <div class="zaznaczenie" id="6-7-zaz"></div>
+            </td>
+            <td class="cel biale" id="6-8">
+                <div class="zaznaczenie" id="6-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel biale" id="7-1">
+                <div class="zaznaczenie" id="7-1-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="7-2">
+                <div class="zaznaczenie" id="7-2-zaz"></div>
+            </td>
+            <td class="cel biale" id="7-3">
+                <div class="zaznaczenie" id="7-3-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="7-4">
+                <div class="zaznaczenie" id="7-4-zaz"></div>
+            </td>
+            <td class="cel biale" id="7-5">
+                <div class="zaznaczenie" id="7-5-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="7-6">
+                <div class="zaznaczenie" id="7-6-zaz"></div>
+            </td>
+            <td class="cel biale" id="7-7">
+                <div class="zaznaczenie" id="7-7-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="7-8">
+                <div class="zaznaczenie" id="7-8-zaz"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cel czerwone" id="8-1">
+                <div class="zaznaczenie" id="8-1-zaz"></div>
+            </td>
+            <td class="cel biale" id="8-2">
+                <div class="zaznaczenie" id="8-2-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="8-3">
+                <div class="zaznaczenie" id="8-3-zaz"></div>
+            </td>
+            <td class="cel biale" id="8-4">
+                <div class="zaznaczenie" id="8-4-zaz"></div>
+            </td>  
+            <td class="cel czerwone" id="8-5">
+                <div class="zaznaczenie" id="8-5-zaz"></div>
+            </td>
+            <td class="cel biale" id="8-6">
+                <div class="zaznaczenie" id="8-6-zaz"></div>
+            </td>
+            <td class="cel czerwone" id="8-7">
+                <div class="zaznaczenie" id="8-7-zaz"></div>
+            </td>
+            <td class="cel biale" id="8-8">
+                <div class="zaznaczenie" id="8-8-zaz"></div>
+            </td>
+        </tr>
+    </table>
+    <button onclick="Start()" id="startBtn">Start</button>
+    <a href="https://www.vecteezy.com/free-vector/chess-pieces" id="linkDoOryginalu">Chess Pieces Vectors by Vecteezy</a>
+    <p id="by">Szachy Leona</p>
+</body>
+</html>
