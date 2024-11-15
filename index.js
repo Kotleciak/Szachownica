@@ -1,9 +1,9 @@
 /*
-    Kod stworzony w całości przez Leona*
+    Code has been created by Kotleciak*
     
     
     
-    *i w 1% ze stackoverflow
+    *1% of code contains stackoverflow
 */
 
 let kolejBiałych = true;
