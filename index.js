@@ -216,7 +216,7 @@ function Aktywacja()
                     dezaktywuj.disabled = true;
                 }
             });
-            const node = document.createTextNode("Kolej Białych!")
+            const node = document.createTextNode("White's turn!")
             document.getElementById("tekstNaGorze").innerText = ""
             document.getElementById("tekstNaGorze").appendChild(node)
         }
@@ -236,7 +236,7 @@ function Aktywacja()
                     dezaktywuj.disabled = false;
                 }
             });
-            const node = document.createTextNode("Kolej Czarnych!")
+            const node = document.createTextNode("Black's turn!")
             document.getElementById("tekstNaGorze").innerText = ""
             document.getElementById("tekstNaGorze").appendChild(node)
         }
@@ -248,11 +248,11 @@ function Wygrana()
 {
     let koniec = false;
     if (!bialeFigury.find(e => e.typ == "krol")) {
-        window.alert("Koniec gry! Czarni wygrywają.")
+        window.alert("Game over! Blacks win.")
         koniec = true
     }
     if (!czarneFigury.find(e => e.typ == "krol")) {
-        window.alert("Koniec gry! Biali wygrywają.")
+        window.alert("Game over! Whites win.")
         koniec = true
     }
     if(koniec)
@@ -274,6 +274,9 @@ function Wygrana()
         bialeFigury = []
         czarneFigury = []
         document.getElementById("startBtn").style.display = "inline"
+        const node = document.createTextNode("Click start!")
+            document.getElementById("tekstNaGorze").innerText = ""
+            document.getElementById("tekstNaGorze").appendChild(node)
     }
 }
 
@@ -383,12 +386,15 @@ function PokazRuchy(number)
                 }
                 if(u.pierwszyRuch &&
                     !bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 1) + "-" + (parseInt(u.pozycja[2]))) &&
-                    !bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 2) + "-" + (parseInt(u.pozycja[2])))
+                    !bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 2) + "-" + (parseInt(u.pozycja[2]))) &&
+                    !czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 1) + "-" + (parseInt(u.pozycja[2]))) &&
+                    !czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 2) + "-" + (parseInt(u.pozycja[2])))
                 )
                     {
                         dostepne.push((parseInt(u.pozycja[0]) + 2) + "-" + (parseInt(u.pozycja[2])))
                     }
-                if(!bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 1) + "-" + (parseInt(u.pozycja[2]))))
+                if(!bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 1) + "-" + (parseInt(u.pozycja[2]))) &&
+                !czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) + 1) + "-" + (parseInt(u.pozycja[2]))))
                 {
                     dostepne.push((parseInt(u.pozycja[0]) + 1) + "-" + (parseInt(u.pozycja[2])))
                 }
@@ -772,12 +778,15 @@ function PokazRuchy(number)
                 }
                 if(u.pierwszyRuch &&
                     !czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 2) + "-" + (parseInt(u.pozycja[2]))) &&
-                    !czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2])))
+                    !czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2]))) &&
+                    !bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 2) + "-" + (parseInt(u.pozycja[2]))) &&
+                    !bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2])))
                 )
                     {
                         dostepne.push((parseInt(u.pozycja[0]) - 2) + "-" + (parseInt(u.pozycja[2])))
                     }
-                if(!czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2]))))
+                if(!czarneFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2]))) &&
+                !bialeFigury.find(e => e.pozycja == (parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2]))))
                 {
                     dostepne.push((parseInt(u.pozycja[0]) - 1) + "-" + (parseInt(u.pozycja[2])))
                 }
